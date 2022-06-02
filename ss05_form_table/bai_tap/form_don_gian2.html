@@ -3,18 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <title>form đơn giản</title>
+    <style>
+        form{
+            background-color: width:;
+        }
+    </style>
 </head>
-<body style="background-color:powderblue;">
+<body style="background-color:cadetblue">
+<fieldset style="background-color:white">
 <form action="https://github.com/namhuynn1911">
-    <fieldset>
-    <h2 style="background-color:red;text-align:center;color:white;">SỞ THÍCH CỦA BẠN</h2>
-        <p style="color:blue">Họ và tên:
-            <input type="text" name="lastname"/>
-        </p>
-        <p style="color:blue">Email
-            <input type="text"name="mail"/>
-        </p>
-    </fieldset>
+    <table>
+       <tr>
+        <h2 style="background-color:red;text-align:center;color:white;">SỞ THÍCH CỦA BẠN</h2>
+       </tr>
+       <tr>
+           <td>
+               <label style="color:blue">Họ và tên:</label>
+            </td>
+           <td>
+           <input type="text" name="lastname"/>
+          </td>
+       </tr>
+        <tr>
+            <td>
+                <label style="color:blue">Email:</label>
+            </td>
+            <td>
+                <input type="text" name="lastname"/>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>Sở thích</td>
+            <td>
+                <label style="color: orange"><input type="checkbox" name="tt"/>Thể thao</label>
+                <label style="color: orange"><input type="checkbox" name="tt"/>Âm nhạc</label>
+                    <label style="color: orange"><input type="checkbox" name="tt"/>Đọc sách</label>
+            </td>
+         </tr>
+        <tr>
+            <td></td>
+               <td>
+                   <label style="color: orange"><input type="checkbox" name="tt"/>Lước web</label>
+                       <label style="color: orange"><input type="checkbox" name="tt"/>Chơi game</label>
+                           <label style="color: orange"><input type="checkbox" name="tt"/>Điện ảnh</label>
+               </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <label style="color: orange"><input type="checkbox"name="tc"/>Du lịch</label>
+            </td>
+        </tr>
+    </table>
+        <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td><input type="submit"value="Gởi thông tin" </td>
+            <td><input type="reset"value="Nhập lại"</td>
+        </tr>
+        </table>
+    </table>
 </form>
+</fieldset>
 </body>
 </html>
