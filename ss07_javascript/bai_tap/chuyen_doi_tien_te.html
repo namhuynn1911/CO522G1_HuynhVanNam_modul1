@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From curency</th>
+            <th>To curency</th>
+        </tr>
+        <tr>
+            <td><input type="number" id="1" ></td>
+            <td>
+                <select id="from">
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
+                </select>
+            </td>
+            <td>
+                <select id="to">
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
+                </select>
+            </td>
+            <td>
+                <button onclick="add()">tinh</button>
+            </td>
+        </tr>
+        <tr>
+            <td style="color: blue">resutlt : </td>
+                <span id="result"></span>
+        </tr>
+    </table>
+</form>
+<script>
+function add() {
+    let number = document.getElementById("1").value;
+    let from_a = document.getElementById("from").value;
+    let to_b = document.getElementById("to").value;
+    let b ;
+    if (from_a != to_b) {
+        if (from_a == "VND") {
+          a = parseInt(number) / 23000;
+            document.getElementById("result").innerHTML = a;
+        } else if (from_a == "USD"){
+          b = parseInt(number) * 23000;
+        }
+    else if
+        (from_a == to_b)
+        {
+            b = parseInt(number);
+        }
+        document.getElementById("result").innerHTML = b;
+    }
+}
+</script>
+</body>
+</html>
