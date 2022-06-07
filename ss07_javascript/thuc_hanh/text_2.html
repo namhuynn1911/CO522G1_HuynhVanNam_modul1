@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From curency</th>
+            <th>To curency</th>
+        </tr>
+        <tr>
+            <td>
+                <input type="number" id="numberA"/>
+            </td>
+        </tr>
+            <!--<td>
+                <select id="from">
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
+                </select>
+            </td>
+            <td>
+                <select id="to">
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
+                </select>
+            </td>-->
+         <tr>
+            <td>
+                <button onclick="add()">tinh</button>
+            </td>
+            <span id="result"></span>
+        </tr>
+    </table>
+<script>
+    function add() {
+        let a = document.getElementById("numberA").value;
+        console.log(a);
+        let q = parseInt(a)*23000;
+        document.getElementById("result").innerText = q;
+    }
+</script>
+</body>
+</html>
