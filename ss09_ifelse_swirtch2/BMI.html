@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+       <h1>Tính chỉ số cân nặng</h1>
+        <tr>
+            <td>Nhập cân nặng: (kg)
+            <span><input type="number" id="wight"/></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Nhập chiều cao: (m)
+                <span><input type="number" id="height"/></span>
+            </td>
+        </tr>
+        <tr>
+            <td><button onclick="bmi()">Kiểm tra</button></td>
+        </tr>
+    </table>
+    <span id="result"></span>
+    <script>
+        function bmi() {
+          var number_wight = document.getElementById("wight").value;
+          var number_height = document.getElementById("height").value;
+          var number_bmi = parseInt(number_wight)/(parseInt(number_height)^2);
+         //document.getElementById("result").innerHTML = number_bmi +"thiếu cân";
+           if(number_bmi < 18.5) {
+              document.getElementById("result").innerHTML = number_bmi + "thiếu cân";
+          } else if(number_bmi < 25.0) {
+               document.getElementById("result").innerHTML = number_bmi + "bình thường";
+           } else if(number_bmi < 30.0) {
+               document.getElementById("result").innerHTML = number_bmi + "thừa cân";
+           }
+          else {
+               document.getElementById("result").innerHTML = number_bmi + "béo phì";
+           }
+        }
+
+    </script>
+</body>
+</html>
