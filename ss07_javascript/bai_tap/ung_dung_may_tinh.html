@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>may_tinh</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <input type="number" id="numbera"/>
+        </td>
+        <td>
+            <input type="number" id="numberb"/>
+        </td>
+        <td><button onclick="plus()">cộng</button> </td>
+        <td><button onclick="subtraction()">trừ</button> </td>
+    </tr>
+    <tr>
+        <td>Result:</td>
+        <td id="result"></td>
+    </tr>
+</table>
+<script>
+    function plus() {
+let inputNumber_a = document.getElementById("numbera").value;
+let inputNumber_b = document.getElementById("numberb").value;
+let sum = parseInt(inputNumber_a) + parseInt(inputNumber_b);
+document.getElementById("result").innerText = sum;
+    }
+    function subtraction() {
+        let inputNumber_c = document.getElementById("numbera").value;
+        let inputNumber_d = document.getElementById("numberb").value;
+        let apalt = parseInt(inputNumber_c) - parseInt(inputNumber_d);
+        document.getElementById("result").innerText = apalt;
+    }
+</script>
+</body>
+</html>

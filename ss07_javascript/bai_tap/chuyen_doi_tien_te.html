@@ -35,22 +35,19 @@
 <span id="result"></span>
 <script>
     function add() {
-        let number = document.getElementById("numberA").value;
-        let from_a = document.getElementById("from").value;
-        let to_b = document.getElementById("to").value;
-        let a;
-        if (from_a != to_b) {
-            a = parseInt(number)*23000;
-        if (from_a != to_b) {
-           if (from_a == "VND") {
-             a = parseInt(number) / 23000;
-           } else (from_a == "USD") {
-             a = parseInt(number) * 23000;
+        let curency = document.getElementById("numberA").value;
+        let fromCurency = document.getElementById("from").value;
+        let toCurency = document.getElementById("to").value;
+        if (fromCurency != toCurency) {
+            if (fromCurency == "VND") {
+                a = parseInt(curency) / 23000;
+            } else  {
+                a = parseInt(curency) * 23000;
+            }
+        }
+       else  {
+               a = parseInt(curency);
            }
-       else (from_a == to_b) {
-               a = parseInt(number);
-           }
-       }
         document.getElementById("result").innerHTML = 'Result:' +a;
     }
 </script>
