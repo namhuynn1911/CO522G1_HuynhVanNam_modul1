@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+            <th>Xếp loại học lực học sinh</th>
+        <tr>
+            <td>Điểm thi giữa kì :<input type="number"id="test_a"/></td>
+        </tr>
+        <tr>
+            <td>Điểm thi cuối kì :<input type="number"id="test_b"/></td>
+        </tr>
+        <tr>
+            <td><button onclick="medium()">Xếp loại</button> </td>
+        </tr>
+    </table>
+    <span id="result"></span>
+    <script>
+        function medium() {
+            let midTest = document.getElementById("test_a").value;
+            let lastTest = document.getElementById("test_b").value;
+            let sumTest = (parseInt(midTest) + parseInt(lastTest)) / 2;
+           if(sumTest < 5) {
+              document.getElementById("result").innerHTML = "Học sinh yếu";
+           } else if(sumTest < 6.5) {
+               document.getElementById("result").innerHTML = "Học sinh trung bình";
+           } else if(sumTest < 8) {
+               document.getElementById("result").innerHTML = "Học sinh khá";
+           } else {
+               document.getElementById("result").innerHTML = "Học sinh giỏi";
+           }
+        }
+    </script>
+</body>
+</html>

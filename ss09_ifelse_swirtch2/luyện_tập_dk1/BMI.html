@@ -24,19 +24,19 @@
     <span id="result"></span>
     <script>
         function bmi() {
-          var number_wight = document.getElementById("wight").value;
-          var number_height = document.getElementById("height").value;
-          var number_bmi = parseInt(number_wight)/(parseInt(number_height)^2);
+          var numberWight = document.getElementById("wight").value;
+          var numberHeight = document.getElementById("height").value;
+          var numberBmi = parseInt(numberWight)/(parseInt(numberHeight)^2);
          //document.getElementById("result").innerHTML = number_bmi +"thiếu cân";
-           if(number_bmi < 18.5) {
-              document.getElementById("result").innerHTML = number_bmi + "thiếu cân";
-          } else if(number_bmi < 25.0) {
-               document.getElementById("result").innerHTML = number_bmi + "bình thường";
-           } else if(number_bmi < 30.0) {
-               document.getElementById("result").innerHTML = number_bmi + "thừa cân";
+           if(numberBmi < 18.5) {
+              document.getElementById("result").innerHTML = numberBmi + "thiếu cân";
+          } else if(numberBmi < 25.0) {
+               document.getElementById("result").innerHTML = numberBmi + "bình thường";
+           } else if(numberBmi < 30.0) {
+               document.getElementById("result").innerHTML = numberBmi + "thừa cân";
            }
           else {
-               document.getElementById("result").innerHTML = number_bmi + "béo phì";
+               document.getElementById("result").innerHTML = numberBmi + "béo phì";
            }
         }
 

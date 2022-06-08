@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+      <form>
+       <img id="myImage" src="https://genk.mediacdn.vn/2019/12/12/photo-1-15761377980501310913025.jpg"style="width: 300px">
+        <p> Click button below to move the image to right</p>
+          <input type="button" value="click Me" onclick="moveRight()"/>
+      </form>
+     <script>
+      var imgobj = null;
+      imgobj = document.getElementById("myImage");
+      function init() {
+      imgobj = document.getElementById("myImage");
+      imgobj.style.position = "relative";
+      imgobj.style.left ="0px"
+      }
+      function moveRight() {
+       imgobj.style.left = parseInt(imgobj.style.left) + 30 + "px";
+      }
+      window.onload = init;
+     </script>
+</body>
+</html>

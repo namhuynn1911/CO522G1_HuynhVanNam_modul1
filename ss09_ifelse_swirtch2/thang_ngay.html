@@ -21,8 +21,8 @@
        </table>
        <script>
            function myfunction() {
-               let number_month = parseInt(document.getElementById("month").value);
-               switch (number_month) {
+               let numberMonth = parseInt(document.getElementById("month").value);
+               switch (numberMonth) {
                    case 1:
                        document.getElementById("result").innerHTML ="tháng 1 có 31 ngày";
                        break;
@@ -39,7 +39,7 @@
                    case 10:
                    case 11:
                    case 12:
-                       document.getElementById("result").innerHTML ="tháng" + number_month + "có 30 ngày";
+                       document.getElementById("result").innerHTML ="tháng" + numberMonth + "có 30 ngày";
                        break;
                }
            }
