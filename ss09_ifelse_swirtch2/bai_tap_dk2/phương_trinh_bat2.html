@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+       <script>
+           let numberA = parseInt(prompt("nhập vào số A",""));
+           let numberB = parseInt(prompt("nhập vào số B",""));
+           let numberC = parseInt(prompt("nhập vào số C",""));
+           let denta = (numberB*numberB)-(4 * numberA * numberC);
+           let doubleSolution = -numberB/2 * numberA;
+           let x1 = ((-numberB) + Math.sqrt(denta)) / (2 * numberA);
+           let x2 = ((-numberB) - Math.sqrt(denta)) / (2 * numberA);
+           if(denta < 0) {
+               document.write("phương trình vô nghiệm");
+           }
+             else if(denta = 0) {
+                 document.write("nghiệm kép" + doubleSolution);
+           } else {
+                 document.write("nghiệm một" + x1);
+                 document.write("nghiệm hai" + x2);
+           }
+       </script>
+</body>
+</html>

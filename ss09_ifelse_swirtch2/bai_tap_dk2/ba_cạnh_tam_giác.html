@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+      <script>
+          var adgeA = parseInt(prompt("nhập vào số A :",""));
+          var adgeB = parseInt(prompt("nhập vào số B :",""));
+          var adgeC = parseInt(prompt("nhập vào số C :",""));
+          var conditionOne = (adgeA>0 && adgeB > 0 && adgeC >0);
+          var conditionTwo = (adgeA + adgeB)>adgeC;
+          var conditionThree = (adgeB + adgeC) >adgeA;
+          var conditionFour = (adgeC + adgeA) >adgeB;
+          if(conditionOne) {
+              if(conditionTwo && conditionThree && conditionFour) {
+                  alert("là ba cạnh cảu tam giác");
+              } else {
+                  alert("không phải 3 cạnh tam giác");
+              }
+          }
+      </script>
+</body>
+</html>

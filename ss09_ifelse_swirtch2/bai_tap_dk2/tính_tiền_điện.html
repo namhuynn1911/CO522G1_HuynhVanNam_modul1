@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+     <h1>Tính tiền điện</h1>
+     <p>lượng điện</p>
+     <input type="number"id="numberA"/>
+     <button onclick="myfunction()">tính</button><br>
+     <p id="result">tổng tiền điện</p>
+    <script>
+    function myfunction() {
+        var numberElectronic =parseInt(document.getElementById("numberA").value);
+        // đơn vị đồng/kwh (tương đương một chữ số điện)
+        var memoryOne = 1.68;
+        var memoryTwo = 1.734;
+        var memoryThree = 2.014;
+        var sum ;
+        if(numberElectronic>0 && numberElectronic<=50) {
+            sum = numberElectronic * memoryOne;
+        }
+        else if(numberElectronic>50 && numberElectronic<100){
+            sum =((numberElectronic - 50)*memoryTwo) + (50 *memoryOne);
+        } else {
+            sum = ((numberElectronic - 100)*memoryThree) + (50 *memoryOne)+(50*memoryTwo);
+        }
+        document.getElementById("result").innerHTML = sum  + "VND";
+      }
+    </script>
+</body>
+</html>

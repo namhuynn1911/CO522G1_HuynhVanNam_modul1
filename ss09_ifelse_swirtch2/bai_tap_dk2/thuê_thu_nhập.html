@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+      <script>
+          let salary = parseInt(prompt("nhập vào mức lương :",""));
+          let levelOne = (0 + (salary*0.1));
+          let levelTwo = (0.75 + (salary*0.2));
+          let levelThree = (3.75 + (salary*0.4));
+          if(salary<10) {
+              alert(levelOne + "trVND");
+          } else if(salary <=50) {
+              alert(levelTwo + "trVND");
+          } else {
+              alert(levelThree + "trVND");
+          }
+      </script>
+</body>
+</html>

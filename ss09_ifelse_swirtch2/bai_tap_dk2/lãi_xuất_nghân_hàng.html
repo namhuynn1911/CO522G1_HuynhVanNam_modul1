@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+      <script>
+          let loan = parseInt(prompt("nhập vào số tiền vay :",""));
+          let mothLoan = parseInt(prompt("số tháng vay :",""));
+          let monthlyPaymentA = ((loan/mothLoan) + ((loan*0.17)/mothLoan));
+          let monthlyPaymentB = ((loan/mothLoan) + ((loan*0.14)/mothLoan));
+          let monthlyPaymentC = ((loan/mothLoan) + ((loan*0.12)/mothLoan));
+          let monthlyPaymentD = ((loan/mothLoan) + ((loan*0.10)/mothLoan));
+              if(loan > 100 && mothLoan >= 12) {
+                       alert(monthlyPaymentA +"trVND");
+              } else if (loan >100 && mothLoan < 12) {
+                      alert(monthlyPaymentB + "trVND");
+              } else if(loan<100 && mothLoan>=12) {
+                     alert(monthlyPaymentC + "trVND");
+              } else if(loan<100 && mothLoan<12) {
+                     alert(monthlyPaymentD + "trVND");
+              }
+      </script>
+</body>
+</html>
