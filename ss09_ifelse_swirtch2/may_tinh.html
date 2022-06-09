@@ -3,25 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        button {
+            width: 40px;height: 40px;
+        }
+    </style>
 </head>
 <body>
-      <table>
-        <tr>
-            <input style="text-align: right" type="number" id="main"/>
-        </tr>
-          <tr>
-           <td>
-               <button onclick="one()">1</button>
-               <button onclick="two()">2</button>
-               <button onclick="three()">3</button>
-               <button onclick="plus()">+</button>
-           </td>
-          </tr>
-      </table>
-      <script>
-          function one() {
-          let numberOne = document.getElementById("main").value;
-          }
-      </script>
+<table border="1" cellspacing="0">
+    <tr>
+        <td colspan="4"><input placeholder="0"type="text" id="result"></td>
+    </tr>
+    <tr>
+        <th><button type="text" value="7" onclick="key7('7')">7</button> </th>
+        <th><button type="text" value="8" onclick="key8('8')">8</button> </th>
+        <th><button type="text" value="9" onclick="key9('9')">9</button> </th>
+        <th><button type="text" value="/" onclick="keyDivide('/')">/</button> </th>
+    </tr>
+    <tr>
+        <th><button type="text" value="4" onclick="key4('4')">4</button> </th>
+        <th><button type="text" value="5" onclick="key5('5')">5</button> </th>
+        <th><button type="text" value="6" onclick="key6('6')">6</button> </th>
+        <th><button type="text" value="*" onclick="keyCore('*')">x</button> </th>
+    </tr>
+    <tr>
+        <th><button type="text" value="1" onclick="key1('1')">1</button> </th>
+        <th><button type="text" value="2" onclick="key2('2')">2</button> </th>
+        <th><button type="text" value="3" onclick="key3('3')">3</button> </th>
+        <th><button type="text" value="-" onclick="keySubtraction('-')">-</button> </th>
+    </tr>
+    <tr>
+        <th><button type="text" value="0" onclick="key0('0')">0</button> </th>
+        <th><button type="text" value="=" onclick="keyResult('=')">=</button> </th>
+        <th><button type="text" value="+" onclick="keyPlus('+')">+</button> </th>
+        <th><button type="text" value="clear" onclick="keyReset()"> C </button> </th>
+    </tr>
+</table>
+<script>
+    function keyReset(value) {
+        document.getElementById("result").value = "";
+    }function key7(value) {
+        document.getElementById("result").value += value;
+    }function display6(value) {
+        document.getElementById("result").value += value;
+    }function key8(value) {
+        document.getElementById("result").value += value;
+    }function key9(value) {
+        document.getElementById("result").value += value;
+    }function keyDivide(value) {
+        document.getElementById("result").value += value;
+    }function key4(value) {
+        document.getElementById("result").value += value;
+    }function key5(value) {
+        document.getElementById("result").value += value;
+    }function key6(value) {
+        document.getElementById("result").value += value;
+    }function keyCore(value) {
+        document.getElementById("result").value += value;
+    }function key1(value) {
+        document.getElementById("result").value += value;
+    }function key2(value) {
+        document.getElementById("result").value += value;
+    }function key3(value) {
+        document.getElementById("result").value += value;
+    }function keySubtraction(value) {
+        document.getElementById("result").value += value;
+    }function key0(value) {
+        document.getElementById("result").value += value;
+    }function keyResult(value) {
+        let a = document.getElementById("result").value;
+        let b = eval(a)
+        document.getElementById("result").value = b;
+    }function keyPlus(value) {
+        document.getElementById("result").value += value;
+    }
+</script>
 </body>
 </html>
