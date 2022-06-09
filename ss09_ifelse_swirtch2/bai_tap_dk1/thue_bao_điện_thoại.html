@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+      <script>
+           var numberA =parseInt(prompt("Nhập số phút gọi",""));
+           var fixedfee = 25000;
+           if(numberA <= 50) {
+               document.write(fixedfee +(numberA * 600));
+           } else if(numberA <=200){
+               document.write(fixedfee +(50*600)+((numberA-50)*400));
+           } else {
+               document.write(fixedfee + (50*600)+(150*400) + ((numberA - 200)*200));
+           }
+      </script>
+</body>
+</html>

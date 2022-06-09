@@ -4,7 +4,44 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
-
+<body onload="docReady()">
+      <img id="pikachu"src="https://genk.mediacdn.vn/2019/12/12/photo-1-15761377980501310913025.jpg"style="position: absolute;left: 0;top:0;"height="500"width="400"/>
+      <script>
+          function up() {
+           var element = document.getElementById("pikachu");
+           element.style.top = parseInt(element.style.top) - 10 + "px";
+          }
+          function dow() {
+           var element = document.getElementById("pikachu");
+           element.style.top = parseInt(element.style.top) + 10 + "px";
+          }
+          function left() {
+              var element = document.getElementById("pikachu");
+              element.style.left = parseInt(element.style.left) - 10 + "px";
+          }
+          function wight() {
+              var element = document.getElementById("pikachu");
+              element.style.left = parseInt(element.style.left) + 10 + "px";
+          }
+          function movi(evt) {
+           switch(evt.keyCode){
+               case 37:
+                   left();
+                   break;
+               case 39:
+                   wight();
+                   break;
+               case 38:
+                   up();
+                   break;
+               case 40:
+                   dow();
+                   break;
+           }
+          }
+          function docReady() {
+           window.addEventListener("keydown",movi)
+          }
+      </script>
 </body>
 </html>
