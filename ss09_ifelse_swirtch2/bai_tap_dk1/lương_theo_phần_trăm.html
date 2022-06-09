@@ -14,11 +14,11 @@
       function myfunction() {
        var turnover =parseInt(document.getElementById("numberA").value);
        var percentB ;
-       if(turnover<499000 && turnover>=100000) {
+       if(turnover <=500000) {
            percentB = turnover * 0.05;
        }
-          else if(turnover >= 500000){
-              percentB =((turnover - 499000)*0.09) + (499000 *0.05);
+          else if(turnover > 500000){
+              percentB =((turnover - 500000)*0.09) + (500000 *0.05);
            }
        document.getElementById("result").innerHTML = percentB  + "VND";
       }
