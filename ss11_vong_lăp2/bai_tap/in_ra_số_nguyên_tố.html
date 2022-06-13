@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+    let count =0;
+    let number =2;//parseInt(prompt("nhập vào số lượng số nguyên tố dc in ra",""));
+    while (count<20) {
+        var divition =0;
+        for (let i = 1; i <= number; i++) {
+        if(number%i==0){
+            divition++;
+        }
+        }
+        if(divition==2){
+            document.write(number +"<br>");
+            count++;
+        }
+        number++;
+    }
+    </script>
+</body>
+</html>
