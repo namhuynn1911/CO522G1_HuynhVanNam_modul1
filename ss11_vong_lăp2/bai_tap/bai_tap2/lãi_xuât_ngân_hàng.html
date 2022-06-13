@@ -6,14 +6,16 @@
 </head>
 <body>
       <script>
-        let loan =parseInt(prompt("nhập vào số tiền vay",""));
-        let month =parseInt(prompt("nhập vào tháng vay",""));
-        let percent = parseInt(prompt("nhập vào phần trăm lại xuất",""));
+        let loan =parseInt(prompt("enter number",""));
+        let month =parseInt(prompt("enter moth",""));
+        let percent = parseInt(prompt("enter percent",""));
         let result=0;
+        let loanTwo =loan;
         for(let i=1;i<=month;i++) {
-            result +=(loan*percent/100);
+            result =result+(loanTwo*(percent/100));
+            loanTwo=loanTwo+result;
         }
-        document.write(result);
+        document.write(result + "<br>");
       </script>
 </body>
 </html>
