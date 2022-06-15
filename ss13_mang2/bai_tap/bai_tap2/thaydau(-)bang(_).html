@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+      <script>
+          /*let array = ["a", "1", "-", "b", "-"];
+          for (i = 0; i < array.length; i++) {
+              if (array[i] === "-") {
+                  array[i] = "_";
+              }
+          }
+          document.write(array);*/
+          let length=prompt("Nhập số phần tử của mảng ");
+          let array = [];
+          for (let i=0; i<length; i++) {
+              array[i] = prompt("Nhập phần tử ","");
+          }
+          for (let i=0; i<array.length; i++) {
+              if (array[i]==="-") {
+                  array[i] = "_";
+              }
+          }
+          document.write(array);
+      </script>
+</body>
+</html>
