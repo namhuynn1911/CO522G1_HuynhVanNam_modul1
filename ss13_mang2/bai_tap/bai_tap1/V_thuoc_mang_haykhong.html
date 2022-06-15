@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+        <script>
+            let length =parseInt(prompt("input amout length :",""));
+            let iteger =[];
+            for(let i=0;i<length;i++) {
+                iteger[i]=parseInt(prompt("input value integer",""));
+            }
+            let numberV=parseInt(prompt("input integer V",""));
+            let i;
+            for(i=0;i<iteger.length;i++) {
+                if(numberV==iteger[i]) {
+                  document.write("V is in the array");
+                  break;
+                }
+            }if(i==iteger.length) {
+                document.write("V is not in the array");
+            }
+
+        </script>
+</body>
+</html>

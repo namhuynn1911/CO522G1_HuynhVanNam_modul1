@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let englist =["banana","orrange","strawberry","cherry","mango","apple "];
+    let vietnamese=["chuối","cam","dâu tây","chery","xoài","táo"];
+    let str=prompt("input enter:");
+    let i=0;
+    for(;i<englist.length;i++){
+        if(str==englist[i]) {
+            document.write(vietnamese[i]);
+            break;
+        }
+    }
+    if(i==englist.length){
+        document.write("không tìm thấy");
+    }
+
+</script>
+</body>
+</html>

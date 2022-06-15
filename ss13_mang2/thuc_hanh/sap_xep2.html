@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+      <script>
+            let arr =[1,4,3,8,2,10,2];
+            let temp =arr[0];
+            for(let i=0;i<arr.length-1;i++) {
+                for(let j=i+1;j<arr.length;j++) {
+                    if(arr[i]<arr[j]) {
+                        temp=arr[j];
+                        arr[j]=arr[i];
+                        arr[i]=temp;
+                    }
+                }
+            }let arrOne =[];
+            for(let i=0;i<arr.length;i++) {
+               arrOne.push(arr[i]);
+            }
+          document.write(arrOne);
+      </script>
+</body>
+</html>

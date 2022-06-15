@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+      <script>
+          let arrayA=new Array(10);
+          let arrayB=new Array(10);
+          for(let i=0;i<arrayA.length;i++){
+              arrayA[i]=parseInt(prompt("nhập vào phần tử thứ "+i+" của mảng a"));
+          }
+          for(let i=0;i<arrayB.length;i++){
+              arrayB[i]=parseInt(prompt("nhập vào phần tử thứ "+i+" của mảng b"));
+          }
+          let arrayC=new Array(20);
+          //nối mảng
+          for(let i=0;i<arrayA.length;i++){
+              arrayC[i]=arrayA[i];
+          }
+          for(let i=0;i<arrayB.length;i++){
+              arrayC[arrayA.length+i]=arrayB[i];
+          }
+          //hiển thị mảng c
+          for(let i=0;i<arrayC.length;i++){
+              document.write(arrayC[i]+"   ");
+          }
+      </script>
+</body>
+</html>

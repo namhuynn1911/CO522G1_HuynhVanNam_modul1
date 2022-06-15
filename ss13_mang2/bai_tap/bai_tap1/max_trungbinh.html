@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+      <script>
+          let length =parseInt(prompt("input amount length",""));
+          let integer=[];
+          let sum =0;
+          let medium;
+          for(let i=0;i<length;i++) {
+              integer[i] =parseInt(prompt("input integer",""));
+          }
+          let max=integer[0];
+          for(let i=0;i<integer.length;i++) {
+              if(integer[i]>max) {
+                  max=integer[i];
+              }
+             sum +=integer[i];
+          }
+          medium=sum/length;
+          document.write("max :"+max+"<br>");
+          document.write("medium :"+medium);
+      </script>
+</body>
+</html>

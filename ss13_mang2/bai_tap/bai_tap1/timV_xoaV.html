@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+       <script>
+           let length =parseInt(prompt("input amout length :",""));
+           let iteger =[];
+           for(let i=0;i<length;i++) {
+               iteger[i]=parseInt(prompt("nhập phần tử vào",""));
+           }
+           let numberV=parseInt(prompt("input integer V",""));
+           let index =-1;
+           for(i=0;i<iteger.length;i++) {
+               if(numberV==iteger[i]) {
+                 index=i;
+               }
+           }
+           if(index !=-1) {
+               for (let j = index; j < iteger.length - 1; j++) {
+                   iteger[j] = iteger[j + 1];
+               }
+               iteger[iteger.length-1] = 0;
+               document.write(iteger);
+           }else {
+               document.write("V không cso trong bảng");
+           }
+          /* Cach 2
+           let index = arr.indexOf(v); //tìm kiếm
+           arr.splice(index,1); //xóa
+           arr.push(0); //thêm cuối
+           document.write(arr);*/
+       </script>
+</body>
+</html>

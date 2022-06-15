@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <script>
+    let srt = prompt("input text");
+    let arr = [];
+    for (let i=0;i<srt.length;i++){
+        if(srt[i]===srt[i].toUpperCase()) {
+            arr.push(srt[i].toLowerCase());
+        }else  if(srt[i]===srt[i].toLowerCase()) {
+            arr.push(srt[i].toUpperCase());
+        }else  {
+            arr.push(srt[i]);
+        }
+    }
+    document.write(arr);
+ </script>
+</body>
+</html>
