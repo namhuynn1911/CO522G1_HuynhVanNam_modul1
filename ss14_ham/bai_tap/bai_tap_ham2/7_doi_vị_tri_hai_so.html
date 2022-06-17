@@ -6,17 +6,16 @@
 </head>
 <body>
 <script>
-    let a = parseInt(prompt("nhập vào số a", ""));
-    let b = parseInt(prompt("nhập vào số b", ""));
-
-    function myFunction() {
-        let c = a;
-        a = b;
-        b = c;
-    }
-
-    myFunction();
-    document.write("số a là" + a + "<br>" + "số b là" + b);
+     function myFunction(array) {
+            let change = array[0];
+            array[0] = array[1];
+            array[1] = change;
+            return array;
+        }
+        let numberA = parseInt(prompt("Nhập số nguyên thứ nhất: "));
+        let numberB = parseInt(prompt("Nhập số nguyên thứ hai: "));
+        let array = [numberA, numberB];
+        alert("Sau khi đổi chỗ: " + myFunction(array));
 </script>
 </body>
 </html>
