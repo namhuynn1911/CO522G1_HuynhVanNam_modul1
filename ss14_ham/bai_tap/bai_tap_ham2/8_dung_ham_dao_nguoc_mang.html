@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let length = prompt("nhập vào độ dài mảng ", "");
+    let arrayOne = [];
+    for (let i = 0; i < length; i++) {
+        arrayOne[i] = prompt("nhập giá trị cho mang", "");
+    }
+    let arrayTwo = [];
+
+    function myFunction() {
+        for (let i = arrayOne.length - 1; i >= 0; i--) {
+            arrayTwo.push(arrayOne[i]);
+        }
+        return arrayTwo;
+    }
+
+    let result = myFunction();
+    document.write(result);
+</script>
+</body>
+</html>

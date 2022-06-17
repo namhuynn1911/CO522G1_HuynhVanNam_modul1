@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="myTxt" type="number" oninput="add()">
+<p id="result"></p>
+<script>
+    function add() {
+        let value = parseInt(document.getElementById("myTxt").value);
+        value++;
+        document.getElementById("result").innerText = value;
+    }
+</script>
+</body>
+</html>

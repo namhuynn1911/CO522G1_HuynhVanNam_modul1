@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bang_don_giang</title>
+</head>
+<body>
+      <script>
+          const H = 10;
+          for(let i = 1; i <= H; i++){
+              for(var k = H; k > i;k--){
+                  document.write("&nbsp;&nbsp;");
+              }
+              for(let j = 1;j <= i * 2 - 1; j++){
+                  document.write("*");
+              }
+              document.writeln("<br />");
+          }
+
+
+
+         document.write("<br>"+"<br>");
+          const xx = 10;
+          for(let i = 1; i <= xx; i++){
+              for(var k = xx; k > i;k--){
+                  document.write("&nbsp;&nbsp;");
+              }
+              for(let j = 1;j <= i * 2 - 1; j++){
+                  if(i==1||i==xx||j==1||j==i*2-1) {
+                      document.write("*");
+                  }else {
+                      document.write("&nbsp;&nbsp;");
+                  }
+              }
+              document.writeln("<br />");
+          }
+
+
+
+          document.write("<br>"+"<br>");
+          const nn = 10;
+          for(let i = 1; i <= nn; i++) {
+              for (let j = 1; j <= i * 2 - 1; j++) {
+                  document.write("*");
+              }
+              document.write("<br>");
+          }
+      </script>
+</body>
+</html>

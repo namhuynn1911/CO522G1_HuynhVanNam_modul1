@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function area(r) {
+        let resultOne = (r * r) * 3.14;
+        return resultOne;
+    }
+
+    function perimeter(r) {
+        let resultTwo = 2 * r * 3.14;
+        return resultTwo;
+    }
+
+    let x = parseInt(prompt("nhập vào bán kình đường tròn", ""));
+    let resultOne = area(x);
+    let resultTwo = perimeter(x);
+    document.write("diện tích hình trìn" + resultOne + "<br>" + "chu vi hình tròn" + resultTwo);
+</script>
+</body>
+</html>
