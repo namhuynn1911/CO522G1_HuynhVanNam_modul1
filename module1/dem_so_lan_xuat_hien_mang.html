@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkNumber(array) {
+        let newArray = [array[0]];
+        for (let i = 0; i < array.length; i++) {
+            let index = 0;
+            for (let j = 0; j < newArray.length; j++) {
+                if (array[i] === newArray[j]) {
+                    index++;
+                }
+            }
+            if (index === 0) {
+                newArray.push(array[i]);
+            }
+        }
+        for (let i = 0; i < newArray.length; i++) {
+            let count = 0;
+            for (let j = 0; j < array.length; j++) {
+                if (array[j] === newArray[i]) {
+                    count++;
+                }
+            }
+            document.write(newArray[i] + "  " + count + " lần " + "<br>");
+        }
+    }
+
+    let number = prompt("nhập mảng số nguyên");
+    checkNumber(number);
+</script>
+</body>
+</html>

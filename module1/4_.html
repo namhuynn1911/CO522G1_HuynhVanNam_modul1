@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let length = prompt("Enter length");
+    let arr = [];
+    for (let i = 0; i < length; i++) {
+        if(length<=50) {
+            arr[i] = parseInt(prompt("Enter characters"));
+        }else {
+            alert("Enter a smaller length ")
+            break;
+        }
+    }
+    document.write(arr+"<br>");
+    let sum=0;
+    let count=0;
+    let average=0;
+    for (let i=0;i<arr.length;i++){
+        if(i%2!==0) {
+            if (arr[i] % 2 == 0) {
+                sum += arr[i];
+                count = count + 1;
+                average = sum / count;
+            }
+        }
+    }
+    document.write("Average is:"+average);
+</script>
+</body>
+</html>

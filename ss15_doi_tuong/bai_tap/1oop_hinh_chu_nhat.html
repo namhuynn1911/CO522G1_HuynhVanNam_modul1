@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+    class mydata {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+
+        getWidth() {
+            return this.width;
+        }
+
+        getHeight() {
+            return this.height;
+        }
+
+        getArea() {
+            return this.width * this.height;
+        }
+
+        getPerimeter() {
+            return (this.width + this.height) * 2;
+        }
+    }
+
+    let rectangle = new mydata(prompt("nhập vào chiều rộng", ""), prompt("nhập vào chiều cao", ""));
+    let width = rectangle.getWidth();
+    let height = rectangle.getHeight();
+    let area = rectangle.getArea();
+    let perimeter = rectangle.getPerimeter();
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#FF0000";
+    ctx.fillRect(0, 0, 150, 75);
+    document.write("width" + width + "<br>" + "height" + height + "<br>" + "area" + area + "<br>" + "perimeter" + perimeter);
+</script>
+</body>
+</html>

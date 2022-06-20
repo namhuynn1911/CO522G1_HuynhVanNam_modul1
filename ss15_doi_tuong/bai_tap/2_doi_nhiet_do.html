@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(celsius) {
+            this.celsius = celsius;
+        }
+
+        getpoison() {
+            return this.celsius;
+        }
+
+        getteperatureF() {
+            return this.celsius *(9 / 5 )+ 32;
+        }
+
+        getteperatureK() {
+            return this.celsius + 273.15;
+        }
+    }
+
+    let temperature = new Temperature(parseInt(prompt("nhập vào độ c", "")));
+    let celsius = temperature.getpoison();
+    let f = temperature.getteperatureF();
+    let k = temperature.getteperatureK();
+    if (celsius >= -273) {
+        document.write("độ c :" + celsius + "<br>" + "độ F :" + f + "<br>" + "độ K :" + k);
+    } else {
+        document.write("nhiệt độ quá thấp");
+    }
+</script>
+</body>
+</html>

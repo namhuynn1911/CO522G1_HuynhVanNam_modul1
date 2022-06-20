@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+    function checkNumber(array, number) {
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] === number) {
+                array[i] = -1;
+            } else if (number % 2 === 0 && array[i] % 2 !== 0) {
+                array[i] += 1;
+            } else if (number % 2 !== 0 && array[i] % 2 === 0) {
+                array[i] += 1;
+            }
+        }
+        return array
+    }
+
+    let number = prompt("nhập số nguyên");
+    document.write("Mảng số nhập là: " + number + "<br>");
+    document.write("Mảng chưa thay đổi là: " + array + "<br>");
+    document.write("Mảng sau khi bị thay đổi là: " + checkNumber(array, number));
+</script>
+</body>
+</html>
