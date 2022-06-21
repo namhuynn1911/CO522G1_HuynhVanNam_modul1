@@ -7,7 +7,7 @@
 <body>
 <canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
 <script>
-    class mydata {
+    class Mydata {
         constructor(width, height) {
             this.width = width;
             this.height = height;
@@ -30,7 +30,7 @@
         }
     }
 
-    let rectangle = new mydata(prompt("nhập vào chiều rộng", ""), prompt("nhập vào chiều cao", ""));
+    let rectangle = new Mydata(prompt("nhập vào chiều rộng", ""), prompt("nhập vào chiều cao", ""));
     let width = rectangle.getWidth();
     let height = rectangle.getHeight();
     let area = rectangle.getArea();
