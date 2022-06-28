@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkStr(str) {
+        let newString = '';
+        let stringA = str.toLowerCase().trim(); //chuyển chuổi đã nhập sang toàn bộ chữ thường
+        document.write("Chuỗi đang chạy: " + stringA + "<br>");
+        newString += stringA[0].toUpperCase();
+        for (let i = 1; i < stringA.length; i++) {
+            if (stringA[i] !== ' ' && stringA[i - 1] === ' ') {
+                newString += stringA[i].toUpperCase();
+            } else {
+                newString += stringA[i];
+            }
+        }
+        return newString;
+    }
+    let input = prompt("Nhập họ và tên");
+    let arr3=checkStr(input);
+    document.write('Kết quả: ' + arr3 + "<br>");
+
+
+    function findLongestWord(string) {
+        let array = [];
+        let arr1 = string.split(' ').sort(function (a, b) {
+            return b.length - a.length;
+        });
+
+        let max = arr1[0].length;
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i].length === max) {
+                array.push(arr1[i]);
+            }
+
+        }
+        return array;
+    }
+    document.write("Từ dài nhất : "+findLongestWord(arr3).toString());
+</script>
+</body>
+</html>

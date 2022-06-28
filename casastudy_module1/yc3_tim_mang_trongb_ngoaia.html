@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrA=[7,2,5,3,5,3]
+    let arrB=[4,7,2,5,4,4,6,6,3,5,3,9,9,19,10]
+    let arrC= [];
+    for (let i = 0; i < arrB.length; i++) {
+        let count = 0;
+        for (let j = 0; j < arrA.length; j++) {
+            if (arrB[i]===arrA[j] ) {
+                count++;
+            }
+        }
+        if (count === 0) {
+            arrC.push(arrB[i]);
+        }
+    }
+    let arr = [];
+    for(let i = 0; i<arrC.length; i++){
+        let position  = arr.indexOf(arrC[i]);
+        if(position == -1){
+            arr.push(arrC[i]);
+        }
+    }
+    arr.sort(function (a, b) {
+        return a - b;
+    })
+    document.write(arr);
+</script>
+</body>
+</html>

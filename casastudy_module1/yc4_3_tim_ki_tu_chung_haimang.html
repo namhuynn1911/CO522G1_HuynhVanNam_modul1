@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*let arrayA = ['a', 'b', 'c', 'd'];
+    let arrayB = ['b', 'n', 'c', 'm'];
+    let arrayC = [];
+    let count = 0;
+    for (let i = 0; i < arrayA.length; i++) {
+        for (let j = 0; j < arrayB.length; j++) {
+            if (arrayA[i] === arrayB[j]) {
+                count++;
+            }
+        }
+    }
+    document.write(count);*/
+    let str1 = prompt("nhập chuỗi thứ 1");
+    let str2 = prompt("nhập chuỗi thứ 2");
+    document.write(str1 + "<br>");
+    document.write(str2 + "<br>");
+    let arr1 = str1.split('');
+    let arr2 = str2.split('');
+    let count = 0;
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr2.indexOf(arr1[i]) !== -1) {
+            count++;
+            arr2.splice(arr2.indexOf(arr1[i]), 1);
+        }
+    }
+    document.write(count + "<br>");
+</script>
+</body>
+</html>

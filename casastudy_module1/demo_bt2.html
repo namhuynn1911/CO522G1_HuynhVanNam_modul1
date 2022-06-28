@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // fdfgd   dfgd  ffhgf
+    function checkStr(string) {
+        let newStr=[];
+        for (let i = 0; i < string.length; i++) {
+            if(string[i]!==" "&&(string[i-1]===" "||string[i-1]===undefined)) {
+                newStr.push(string[i].toUpperCase());
+            }
+        }
+        if(newStr.length>1) {
+            return newStr.join("");
+        }else {
+            return "chuỗi này chỉ được tính chỉ có 1 từ";
+        }
+    }
+    let string=prompt("nhập vào chuỗi");
+    document.write(string+"<br>");
+    document.write("kết quả : "+ checkStr(string));
+
+</script>
+</body>
+</html>

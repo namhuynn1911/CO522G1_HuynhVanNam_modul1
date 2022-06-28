@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m=prompt("Nhập số hàng");
+    let n=prompt('Nhập số cột');
+    let arr=[];
+    for (let i=0;i<m;i++) {
+        let arr1 = []
+        for (let j = 0; j < n; j++) {
+            arr1[j] = parseInt(prompt('nhập phàn tử'));
+            document.write(arr1[j]+" ");
+        }
+        arr[i]=arr1;
+        document.write("<br>");
+    }
+
+
+    function prime(array2d) {
+        let newArr = [];
+        for (let i = 0; i < array2d.length; i++) {
+            for (let j = 0; j < array2d[i].length; j++) {
+                let divisior = 0;
+                for (let k = 1; k <= array2d[i][j]; k++) {
+                    if (array2d[i][j] % k === 0) {
+                        divisior++;
+                    }
+                }
+                if (divisior === 2) {
+                    newArr.push(array2d[i][j]);
+                }
+            }
+        }
+        return newArr;
+    }
+
+    document.write("số nguyên tố :" + prime(arr) + "<br>");
+    document.write("số lượng số nguyên tố trong mảng: " + prime(arr).length);
+</script>
+</body>
+</html>

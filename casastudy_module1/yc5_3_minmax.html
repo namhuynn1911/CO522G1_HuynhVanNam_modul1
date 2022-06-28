@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   /* let row = prompt("nhập độ dài dòng");
+    let col;
+    let arr2d = [];
+    for (let i=0;i<row;i++){
+        col = prompt("nhập độ dài cột");
+        let array=[];
+        for(let j=0;j<col;j++){
+            array[j]=parseInt(prompt("nhập ["+i+"]"+"["+j+"]"));
+            document.write(array[j]+" ");
+        }arr2d[i]=array;
+        document.write("<br>")
+    }*/
+   let m=prompt("Nhập số hàng");
+   let n=prompt('Nhập số cột');
+   let arr=[];
+   for (let i=0;i<m;i++) {
+       let arr1 = [];
+       for (let j = 0; j < n; j++) {
+           arr1[j] = parseInt(prompt('nhập phàn tử' +[i]+[j]));
+           document.write(arr1[j]+" ");
+       }
+       arr[i]=arr1;
+       document.write("<br>");
+   }
+document.write(arr[0][2]+"<br>");
+    function EvenNumber(array2d) {
+        let max = array2d[0][0];
+        let min = array2d[0][0];
+        for (let i = 0; i < array2d.length; i++) {
+            for (let j = 0; j < array2d[i].length; j++) {
+                if (array2d[i][j] > max) {
+                    max = array2d[i][j];
+                }
+                if (array2d[i][j] < min) {
+                    min = array2d[i][j];
+                }
+            }
+
+        }
+        document.write("max =  " + max+"<br>");
+        document.write("min =  "+ min);
+    }
+
+    let a = arr;
+    EvenNumber(a);
+</script>
+</body>
+</html>

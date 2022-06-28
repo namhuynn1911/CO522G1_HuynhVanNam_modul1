@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //chuẩn hóa chuổi thành chuổi có kí tự đầu sang in hoa(object orenti programming-->OOP);
+    let str =prompt("nhập vào chuỗi","");
+    function myFunction(str) {
+        let str1 = str.trim();
+       // document.write(str1 + "<br>");
+        let arr = str1.split(" ");
+        document.write(arr + "<br>");
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = arr[i].charAt(0).toUpperCase();
+        }
+    if(arr.length>1) {
+        return arr.join("");
+    }else {
+        return "chuỗi này chỉ được tính chỉ có 1 từ";
+    }
+    }
+    document.write(myFunction(str));
+</script>
+</body>
+</html>

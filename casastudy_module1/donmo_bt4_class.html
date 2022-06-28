@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Bankaccount {
+        constructor(code, name, bankName, total) {
+            this.code = code;
+            this.name = name;
+            this.bankName = bankName;
+            this.total = total;
+        }
+
+        getCode() {
+            return this.code;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getBankName() {
+            return this.bankName;
+        }
+
+        getTotal() {
+            return this.total;
+        }
+
+        setCode(code) {
+            this.code = code;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        setBankName(bankName) {
+            this.bankName = bankName;
+        }
+
+        setTotal(total) {
+            this.total = total;
+        }
+
+        toString() {
+            return this.getCode() +"/"+ this.getName() +"/"+ this.getBankName() +"/"+ this.getTotal();
+        }
+    }
+
+    let result = new Bankaccount("hn424", "namhuynh", "mb bank", 7788);
+    document.write(result.toString()+"<br>");
+    result.setBankName("viettinbank");
+    document.write(result.toString());
+</script>
+</body>
+</html>

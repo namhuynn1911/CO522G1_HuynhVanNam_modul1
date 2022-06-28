@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m=prompt("Nhập số hàng");
+    let n=prompt('Nhập số cột');
+    let arr=[];
+    for (let i=0;i<m;i++) {
+        let arr1 = []
+        for (let j = 0; j < n; j++) {
+            arr1[j] = parseInt(prompt('nhập phàn tử'));
+        }
+        arr[i]=arr1;
+    }
+    for (let i=0;i<arr.length;i++){
+
+        document.write(arr[i]+"<br>");
+    }
+    function myFunction(arrnew) {
+        let sum = 0;
+        for (let i = 0; i < arrnew.length; i++) {
+            for (let j = 0; j < arrnew[i].length; j++) {
+                if (arrnew[i][j] % 2 === 0) {
+                    sum += arrnew[i][j];
+                }
+            }
+        }
+        return sum;
+    }
+    myFunction(arr);
+    document.write(myFunction(arr));
+   /*let row = prompt("nhập độ dài dòng");
+   let col;
+   let arr2d = [];
+   for (let i=0;i<row;i++){
+       col = prompt("nhập độ dài cột");
+       let array=[];
+       for(let j=0;j<col;j++){
+           array[j]=parseInt(prompt("nhập ["+i+"]"+"["+j+"]"));
+           document.write(array[j]+" ");
+       }arr2d[i]=array;
+       document.write("<br>")
+   }
+
+    function sumEvenNumber(array2d) {
+        let sum = 0;
+        for (let i = 0; i < array2d.length; i++) {
+            for (let j = 0; j < array2d[i].length; j++) {
+                if (array2d[i][j] % 2 === 0) {
+                    sum += array2d[i][j];
+                }
+            }
+        }
+        return sum;
+    }
+    let arr = arr2d;
+    sumEvenNumber(arr);
+    document.write("tổng các số chẵn = "+sumEvenNumber(arr))*/
+</script>
+</body>
+</html>

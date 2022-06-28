@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function myFunction(n) {
+        let sum = 0;//khai bao biem sum
+        for (let i = 1; i <= n / 2; i++) {
+            if (n % i === 0) {
+                sum += i;
+            }
+        }
+        if (sum === n) {
+            return true;
+        }
+    }
+
+    let number = parseInt(prompt("nhập vào số ngẫu nhiên"));
+    let minnumber = 6;
+    let count = 0;
+    while (count < number) {
+        if (myFunction(minnumber)) {
+            count++;
+            document.write(minnumber + "<br>");
+        }
+        minnumber++;
+    }
+
+    /*let result=myFunction(number);
+    //int main(){
+     //   int n;
+       // cout<<"Nhap n: ";
+       // cin>>n;
+        if(result) {
+            document.write("a so hoan hao");
+        }
+        else {
+            document.write(" khong la so hoan hao.");
+            }*/
+</script>
+</body>
+</html>

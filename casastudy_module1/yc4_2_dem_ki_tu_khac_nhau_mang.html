@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("nhập vào chuổi cần đếm", "");
+    let arr = [];
+    let index = 0;
+    for (let i = 0; i < str.length; i++) {
+        index = 0;
+        for (let j = 0; j < arr.length; j++) {
+                if(str[i]===arr[j]) {
+                    index++;
+                }
+        }
+        if(index===0) {
+            arr.push(str[i]);
+        }
+    }
+    document.write(arr  + "<br>" +arr. length);
+</script>
+</body>
+</html>

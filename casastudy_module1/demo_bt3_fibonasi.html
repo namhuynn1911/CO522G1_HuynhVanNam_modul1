@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //hàm sắp xếp mảng chạy từ nhỏ tới lớn;
+    function checkFibonasi(arr) {
+        arr.sort(function (a, b) {
+            return a - b;
+        })
+        let newArr=[0,1];
+        let number1 = 0;
+        let number2 = 1;
+        let number3 = 1;
+
+        while (number3 <= arr[arr.length - 1]) {
+            newArr.push(number3);
+            number1 = number2;
+            number2 = number3;
+            number3 = number1 + number2;
+        }
+        let arrResult = [];
+        for(let i=0;i<arr.length;i++) {
+                if(newArr.includes(arr[i])) {
+                    arrResult.push(arr[i]);
+                }
+            }
+        return arrResult;
+    }
+    let array =[];
+    let number =parseInt(prompt("nhập vào chiều dài mảng"));
+    for(let i=0;i<number;i++) {
+        array[i]=parseInt(prompt("nhập vào phần tử mảng"));
+    }
+    document.write("mảng đã nhập: "+array+"<br>");
+    document.write("kết quả: "+checkFibonasi(array));
+</script>
+</body>
+</html>

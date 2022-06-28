@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let length;
+    let integer = [];
+    do {
+        length = parseInt(prompt("input amout length :", ""));
+    } while (!(length % 1 === 0 && 0 < length <= 50));
+
+    for (let i = 0; i < length; i++) {
+        integer[i] = parseInt(prompt("nhập phần tử vào", ""));
+    }
+    document.write(integer + "<br>");
+    let count = 0;
+    let sum = 0;
+    let result;
+    for (let i = 0; i < integer.length; i += 3) {
+        if (integer[i] % 5 === 0) {
+            sum += integer[i];
+            count++;
+        }
+    }
+    result = sum / count;
+    if (count === 0) {
+        document.write("mảng không thỏa điều kiện");
+    } else {
+        document.write(result);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let sum1 = 0;
+    let sum2 = 0;
+    function myFunction(number1, number2) {
+        for (let i = 0; i < number1; i++) {
+            if(number1%i===0) {
+                sum1 +=i;
+            }
+        }
+        for(let j= 0;j<number2;j++) {
+            if(number2%j===0) {
+                sum2 +=j;
+            }
+        }
+        if(number1===sum2&&number2===sum1) {
+            return true;
+        }
+    }
+    let number = parseInt(prompt("nhập vào số ngẫu nhiên"));
+    let numberOne=0;
+    let numberTwo=0;
+    let count = 0;
+    while (count < number) {
+        if (myFunction(numberOne,numberTwo)) {
+            count++;
+            document.write(numberOne+numberTwo + "<br>");
+        }
+        numberOne++;
+        numberTwo++;
+    }
+    /*let number = +prompt("a");
+    let number1 = +prompt("b")
+    let sum = 0
+    let sum1 = 0
+    for (let i = 1; i < number; i++) {
+        if (number % i === 0) {
+            sum += i
+        }
+    }
+    if (sum === number) {
+        alert("a")
+    }
+    for (let i = 1; i < number1; i++) {
+        if (number1 % i === 0) {
+            sum1 += i
+        }
+    }
+    if (sum1 === number1) {
+        alert("b")
+    }
+    if(sum===number1&&sum1===number){
+        alert("số thân thiết")
+    }*/
+</script>
+</body>
+</html>

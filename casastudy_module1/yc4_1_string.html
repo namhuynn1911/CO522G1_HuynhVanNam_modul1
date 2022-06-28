@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //chuẩn hóa một chuổi chữ đầu chuyển sang in hoa;
+   function myFunction(str) {
+       let arr2;
+       let str1 = str.trim();
+       document.write(str1+"<br>");
+      let arr = str1.toLowerCase().split(" ");
+       //document.write(arr+"<br>");
+       for (let i = 0; i < arr.length; i++) {
+           arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+       }
+        arr2=arr.join(' ');
+       return arr2;
+   }
+   let str =prompt("nhập vào chuỗi","");
+   let arr3=myFunction(str);
+   document.write(arr3+"<br>");
+
+   //hàm tìm giá trị dài nhất trong mảng;
+    function findLongestWord(string) {
+        let array = [];
+        let arr1 = string.split(' ').sort(function (a, b) {
+            return b.length - a.length;
+        });
+
+        let max = arr1[0].length;
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i].length === max) {
+                array.push(arr1[i]);
+            }
+
+        }
+        return array;
+    }
+    document.write("Từ dài nhất : "+findLongestWord(arr3).toString());
+</script>
+</body>
+</html>
